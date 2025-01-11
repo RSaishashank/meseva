@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meseva</title>
+    <style>
+        .info-box {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 300px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <script>
+        function showInfo() {
+            const selectElement = document.getElementById("infoSelect");
+            const selectedValue = selectElement.value;
+            const infoBox = document.getElementById("infoBox");
+
+            if (selectedValue === "option1") {
+                infoBox.textContent = "You selected Option 1: This is some information about Option 1.";
+            } else if (selectedValue === "option2") {
+                infoBox.textContent = "You selected Option 2: Here's more about Option 2.";
+            } else if (selectedValue === "option3") {
+                infoBox.textContent = "You selected Option 3: Learn about Option 3 here.";
+            } else {
+                infoBox.textContent = "Please select an option to see information.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="infoSelect">Choose an option:</label>
+    <select id="infoSelect" onchange="showInfo()">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <div id="infoBox" class="info-box">
+        Please select an option to see information.
+    </div>
+</body>
+</html>
